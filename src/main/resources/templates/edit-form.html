@@ -1,0 +1,15 @@
+<html>
+</head>
+<body>
+<form method="post" action="/update">
+    <input type="hidden" placeholder="Name" name="id" th:value="${cinema.id}"/>
+
+    <input type=”text” name=”name” placeholder="Cinema name" th:value="${cinema.name}" id="name"/>
+    <input type=”text” name=”year” placeholder="Year" th:value="${cinema.year}" id="year"/>
+    <input type=”text” name=”author” placeholder="Author name" th:value="${cinema.author}" id="author"/>
+    <input type=”text” name=”genre” placeholder="Genre" th:value="${cinema.genre}" id="genre"/>
+    <input type="submit"/><br>
+</form>
+
+</body>
+</html>

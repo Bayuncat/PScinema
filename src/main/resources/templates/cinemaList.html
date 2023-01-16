@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cinema List</title>
+</head>
+<body>
+<h1>Cinema List</h1>
+
+<br/><br/>
+<div>
+    <table border="1" cellspacing="5">
+        <tr>
+            <th>Name</th>
+            <th>Year</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+        <tr th:each ="cinema : ${cinemas}">
+            <td th:text="${cinema.name}" />
+            <td th:text="${cinema.year}" />
+            <td th:text="${cinema.author}" />
+            <td th:text="${cinema.genre}">/>
+            <td>
+                <a th:href="@{'/edit-form/' + ${cinema.id}}">Edit</a>
+            </td>
+            <td>
+                <a th:href="@{'/delete/' + ${cinema.id}}">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <a href="/create-form">Add cinema</a>
+    <br><br>
+
+
+</div>
+</body>
+</html>
